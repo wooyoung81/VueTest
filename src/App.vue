@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 카멜 규칙으로 컨포넌트를 생성한 이유는  자동 완성 때문이다. -->
+    <tool-bar></tool-bar>
+    <!-- url이 만약 news -->
+    <router-view></router-view>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ToolBar from './components/ToolBar'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  components :{
+    ToolBar,
+  },
 }
 </script>
 
@@ -21,8 +23,12 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  padding: 0;
+  margin:  0;
 }
 </style>
